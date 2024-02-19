@@ -43,18 +43,19 @@
 <sub>Template.ohml (OHML)</sub>
 
 ```cs
-<% export="template":>
-<html:
-  <head:
-    <title:
-      <% virtual="title": default title>
+<%export(template):
+  <html:
+    <head:
+      <title:
+        <%virtual(title): default title>
+      >
+      <meta name="description" content="template description":>
+      <link rel="stylesheet" href="styles.css":>
     >
-    <meta name="description" content="template description":>
-    <link rel="stylesheet" href="styles.css":>
-  >
-  <body:
-    <% virtual="body":
-      <p class="message": it's default body>
+    <body:
+      <%virtual(body):
+        <p class="message": it's default body>
+      >
     >
   >
 >
@@ -63,9 +64,9 @@
 <sub>Page.ohml (OHML)</sub>
 
 ```cs
-<% import="template":
-  <% override="title": updated title>
-  <% override="body":
+<%import(template):
+  <%override(title): updated title>
+  <%override(body):
     <h1 class="title": updated body>
     <p class="message": i'm override>
   >
@@ -96,11 +97,11 @@
 <sub>Page.ohml (OHML)</sub>
 
 ```cs
-<% import="template":
-  <% override="title": <% bind="myTitle">>
-  <% override="body":
-    <h1 class="title": <% bind="myBodyTitle":>>
-    <p class="message": <% bind="myMessageText":>>
+<%import(template):
+  <%override(title): <%bind(myTitle):>>
+  <%override(body):
+    <h1 class="title": <%bind(myBodyTitle):>>
+    <p class="message": <%bind(myMessageText):>>
   >
 >
 ```
