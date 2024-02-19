@@ -7,15 +7,15 @@
 
 <sub>OHML</sub>
 
-```sh
+```cs
 <html:
   <head:
-    <title: Hello World Page>
-    <meta name="description" content="Our first hello world page":>
+    <title: hello world page>
+    <meta name="description" content="hello world page description":>
     <link rel="stylesheet" href="styles.css":>
   >
   <body:
-    <p class="message": Hello World>
+    <p class="message": hello world!>
   >
 >
 ```
@@ -26,12 +26,12 @@
 <!doctype html>
 <html>
     <head>
-        <title>Hello World Page</title>
-        <meta name="description" content="Our first hello world page">
+        <title>hello world page</title>
+        <meta name="description" content="hello world page description">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <p class="message">Hello World!</p>
+        <p class="message">hello world!</p>
     </body>
 </html>
 ```
